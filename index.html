@@ -53,7 +53,7 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest text-slate-300">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest">
             <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
             <a href="#unesco" class="block hover:text-blue-400 transition">UNESCO Project</a>
             <a href="#summary" class="block hover:text-blue-400 transition">Executive Summary</a>
@@ -116,31 +116,25 @@
                     SMLA Joins the <span class="gradient-text">UNESCO Resilient AI Challenge</span> 🛡️🌍
                 </h3>
                 <p class="text-slate-400 max-w-3xl mx-auto text-lg leading-relaxed">
-                    SMLA has officially submitted the <strong>H2E-Resilient</strong> entry for the 2026 UNESCO Resilient AI Challenge, advocating for Technological Sovereignty and Green AI through deterministic, cloud-independent intelligence.
+                    SMLA has officially submitted our entry for the 2026 UNESCO Resilient AI Challenge. We are advocating for <strong>Technological Sovereignty and Green AI</strong>, proving that high-performance intelligence doesn't require a permanent cloud connection.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
                 <div class="space-y-6">
                     <div class="bg-slate-800 p-8 rounded-2xl border border-blue-500/20 shadow-xl">
-                        <h4 class="text-2xl font-bold text-white mb-4">The H2E-Resilient Breakthrough</h4>
+                        <h4 class="text-2xl font-bold text-white mb-4 text-center">Breakthrough Performance</h4>
                         <p class="text-slate-300 mb-6">
                             Using the <strong>NVIDIA L4 Tensor Core GPU</strong>, we optimized <strong>Voxtral-Mini-4B</strong> to deliver expert-level transcription while operating under a strict <strong>3.15 GB VRAM ceiling</strong>.
                         </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-emerald-500/10 p-2 rounded-lg text-emerald-400"><i class="fas fa-leaf"></i></div>
-                                <div>
-                                    <p class="text-white font-bold text-sm">Green AI Sustainability</p>
-                                    <p class="text-slate-400 text-xs">0.001175 kg CO2 footprint per cycle.</p>
-                                </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+                                <p class="text-emerald-400 font-bold text-xl">44.25W</p>
+                                <p class="text-slate-500 text-xs uppercase font-bold tracking-tighter">Power Draw</p>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="bg-blue-500/10 p-2 rounded-lg text-blue-400"><i class="fas fa-microchip"></i></div>
-                                <div>
-                                    <p class="text-white font-bold text-sm">Frugal Computation</p>
-                                    <p class="text-slate-400 text-xs">44.25 Watts verified power draw.</p>
-                                </div>
+                            <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+                                <p class="text-blue-400 font-bold text-xl">100%</p>
+                                <p class="text-slate-500 text-xs uppercase font-bold tracking-tighter">Deterministic</p>
                             </div>
                         </div>
                     </div>
@@ -151,13 +145,13 @@
                         <thead>
                             <tr class="bg-slate-800 text-blue-400 uppercase text-xs tracking-widest">
                                 <th class="p-4">Engineering Metric</th>
-                                <th class="p-4">Audit Result</th>
+                                <th class="p-4">Verified Result</th>
                             </tr>
                         </thead>
                         <tbody class="text-slate-300">
                             <tr class="border-b border-slate-800">
-                                <td class="p-4 font-mono">⚡ Real-Time Factor (RTF)</td>
-                                <td class="p-4 text-emerald-400 font-bold">~0.917 (Avg)</td>
+                                <td class="p-4 font-mono">⚡ RTF (Average)</td>
+                                <td class="p-4 text-emerald-400 font-bold">~0.917 (Limit < 1.0)</td>
                             </tr>
                             <tr class="border-b border-slate-800">
                                 <td class="p-4 font-mono">💾 VRAM Peak Memory</td>
@@ -168,8 +162,8 @@
                                 <td class="p-4 text-emerald-400 font-bold">100% (Seed 123)</td>
                             </tr>
                             <tr>
-                                <td class="p-4 font-mono">🔋 Power Efficiency</td>
-                                <td class="p-4 text-emerald-400 font-bold">44.25 Watts</td>
+                                <td class="p-4 font-mono">🌿 CO2 Footprint</td>
+                                <td class="p-4 text-emerald-400 font-bold">0.001175 kg / cycle</td>
                             </tr>
                         </tbody>
                     </table>
@@ -178,58 +172,73 @@
 
             <div class="mt-12">
                 <h4 class="text-xl font-bold text-white mb-6 uppercase tracking-widest text-center">
-                    Detailed Performance Audit (H2E_Final_Performance_Audit.csv)
+                    Performance Audit Results (H2E_Final_Performance_Audit.csv)
                 </h4>
                 <div class="overflow-x-auto bg-slate-950 rounded-2xl border border-slate-800">
                     <table class="w-full text-left border-collapse text-sm">
                         <thead>
                             <tr class="bg-slate-800/50 text-slate-400">
-                                <th class="p-4 border-b border-slate-700">Audit Reference File</th>
+                                <th class="p-4 border-b border-slate-700">File</th>
                                 <th class="p-4 border-b border-slate-700 text-center">RTF</th>
                                 <th class="p-4 border-b border-slate-700 text-center">VRAM (GB)</th>
-                                <th class="p-4 border-b border-slate-700">Test Category / Result</th>
+                                <th class="p-4 border-b border-slate-700">Transcript Snippet</th>
+                                <th class="p-4 border-b border-slate-700">Status</th>
                             </tr>
                         </thead>
                         <tbody class="text-slate-300">
-                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
-                                <td class="p-4 font-mono text-xs">barackobama2004dncARXE.mp3</td>
-                                <td class="p-4 font-bold text-center">0.928</td>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">barackobama2004dncARXE.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.928</td>
                                 <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-slate-500 italic">"Thank you so much. Thank you so much..."</td>
                                 <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
                             </tr>
-                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
-                                <td class="p-4 font-mono text-xs">brad_pitt_sag_2020.mp3</td>
-                                <td class="p-4 font-bold text-center">0.921</td>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">barackobamatransitionaddress1.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.919</td>
                                 <td class="p-4 text-center">3.07</td>
-                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS (Acoustic Stress)</td>
+                                <td class="p-4 text-slate-500 italic">"On Tuesday, Americans stood in line..."</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
                             </tr>
-                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
-                                <td class="p-4 font-mono text-xs">mandela_davos_1999.mp3</td>
-                                <td class="p-4 font-bold text-center">0.908</td>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">brad_pitt_sag_2020.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.921</td>
                                 <td class="p-4 text-center">3.07</td>
-                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS (Historical Justice)</td>
+                                <td class="p-4 text-slate-500 font-bold">[Acoustic Stress Test]</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
                             </tr>
-                            <tr class="hover:bg-slate-900/40">
-                                <td class="p-4 font-mono text-xs text-blue-400">mark_carney_davos_2026.mp3</td>
-                                <td class="p-4 font-bold text-center">0.916</td>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">mandela_davos_1999.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.908</td>
                                 <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-slate-500 font-bold">[Historical Justice Test]</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
+                            </tr>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">mark_carney_davos_2026.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.916</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-slate-500 italic">"Thank you very"</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
+                            </tr>
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-mono text-xs text-blue-300">mlk_mountaintop_1968.mp3</td>
+                                <td class="p-4 font-bold text-center text-white">0.911</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-slate-500 italic">"Thank you very kindly, my friends."</td>
                                 <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="mt-6 text-center text-slate-500 text-sm italic">
-                    All audits conducted with Greedy Decoding and Seed 123 to ensure zero model drift.
-                </p>
             </div>
         </div>
     </section>
 
     <section id="summary" class="py-24 bg-slate-800/20">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl font-bold mb-16 text-center">Executive Summary</h2>
-           
-            <div class="grid md:grid-cols-2 gap-12">
+        <div class="container mx-auto px-6 max-w-6xl text-center">
+            <h2 class="text-4xl font-bold mb-16">Executive Summary</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
                 <div class="space-y-8">
                     <div class="p-8 bg-slate-800 rounded-2xl border border-red-900/30">
                         <h3 class="text-xl font-bold mb-4 text-red-400 uppercase tracking-widest">1. The Problem</h3>
@@ -266,21 +275,14 @@
             </p>
 
             <div class="max-w-4xl mx-auto text-left space-y-6 text-slate-300 mb-12">
-                <h3 class="text-2xl font-bold text-blue-400 mb-4">How the H2E-Resilient Pipeline Works</h3>
+                <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">How it Works</h3>
                 <p>
                     The H2E-Resilient AI Pipeline is a deterministic workflow designed to eliminate probabilistic uncertainty. It enforces <strong>unconditional human oversight</strong> by combining expert validation shields with locked sovereign artifacts.
                 </p>
-
-                <ol class="list-decimal pl-8 space-y-5 text-slate-300">
-                    <li>
-                        <strong>Mission Query Intake & Shield Validation:</strong> A deterministic validation layer checks the query against expert-aligned rules. If validation fails, execution is blocked.
-                    </li>
-                    <li>
-                        <strong>Sovereign Artifact Deployment:</strong> Deploys a frozen <strong>.pth model checkpoint</strong>. Inference uses <strong>greedy decoding</strong> and a locked random seed (<code>123</code>) to guarantee identical outputs across hardware.
-                    </li>
-                    <li>
-                        <strong>Verified Output Execution:</strong> Deterministic output is routed to target systems (flight manuals or 22-DoF humanoid robots) with verifiable traces for full auditability.
-                    </li>
+                <ol class="list-decimal pl-8 space-y-5">
+                    <li><strong>Mission Query Intake & Shield Validation:</strong> Expert-aligned rules block execution if validation fails.</li>
+                    <li><strong>Sovereign Artifact Deployment:</strong> Locked .pth checkpoints with <strong>Greedy Decoding</strong> and <strong>Seed 123</strong>.</li>
+                    <li><strong>Verified Output Execution:</strong> Deterministic routing to flight manuals or 22-DoF humanoid actuators.</li>
                 </ol>
             </div>
 
