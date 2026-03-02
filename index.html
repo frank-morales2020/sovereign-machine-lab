@@ -26,6 +26,29 @@
         table { border-collapse: collapse; width: 100%; }
         th, td { padding: 1rem; }
         tr:hover { background-color: rgba(30,41,59,0.5); transition: background-color 0.2s; }
+        .diagram-container {
+            background: rgba(15,23,42,0.6);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid rgba(59,130,246,0.3);
+            margin-bottom: 3rem;
+        }
+        .diagram-img {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            color: #94a3b8;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 1.25rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
@@ -40,6 +63,7 @@
                 <a href="#mission" class="hover:text-blue-400 transition">Mission</a>
                 <a href="#unesco" class="hover:text-blue-400 transition">UNESCO Challenge</a>
                 <a href="#summary" class="hover:text-blue-400 transition">Summary</a>
+                <a href="#why-h2e" class="hover:text-blue-400 transition">Why H2E</a>
                 <a href="#h2e" class="hover:text-blue-400 transition">H2E Pipeline</a>
                 <a href="#references" class="hover:text-blue-400 transition">References</a>
                 <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="text-blue-400 border border-blue-400 px-4 py-1 rounded-full hover:bg-blue-400 hover:text-slate-900 transition font-bold">GitHub</a>
@@ -52,6 +76,7 @@
             <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
             <a href="#unesco" class="block hover:text-blue-400 transition">UNESCO Challenge</a>
             <a href="#summary" class="block hover:text-blue-400 transition">Summary</a>
+            <a href="#why-h2e" class="block hover:text-blue-400 transition">Why H2E</a>
             <a href="#h2e" class="block hover:text-blue-400 transition">H2E Pipeline</a>
             <a href="#references" class="block hover:text-blue-400 transition">References</a>
             <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="block text-blue-400 border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-slate-900 transition font-bold mx-auto max-w-xs">GitHub Project</a>
@@ -263,6 +288,57 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: Why H2E Matters -->
+    <section id="why-h2e" class="py-24 bg-gradient-to-b from-slate-900 to-slate-800 border-y border-slate-700">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-6 gradient-text">Why H2E Matters</h2>
+                <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                    Bridging Linguistic Guessing → Physical Causality → Sovereign, Accountable Control
+                </p>
+            </div>
+
+            <div class="space-y-20">
+                <!-- Part 1: Transformer vs JEPA Comparison -->
+                <div class="diagram-container">
+                    <h3 class="text-3xl font-bold text-blue-400 mb-8 text-center">Part 1: Transformer (Generative) vs. JEPA (World Model)</h3>
+                    <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/comparing-ai-cognition-architectures.png" 
+                         alt="Comparison of Transformer Generative Model vs JEPA World Model – Pen does not bend, it rolls or breaks" 
+                         class="diagram-img">
+                    <figcaption>
+                        Transformers predict next tokens via statistical patterns in text (linguistic prison).<br>
+                        JEPA predicts feasible future states via physical constraints, energy minimization, and internal simulation (causal grounding).<br>
+                        Example: A rigid pen pushed on paper – it rolls or breaks, never bends.
+                    </figcaption>
+                </div>
+
+                <!-- Part 2: H2E as the Holonomic Bridge -->
+                <div class="diagram-container">
+                    <h3 class="text-3xl font-bold text-emerald-400 mb-8 text-center">Part 2: H2E – Holonomic Integration for Embodied Control</h3>
+                    <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/h2e-framework-embodied-control.png" 
+                         alt="H2E Framework integrating Transformer symbolic reasoning with JEPA physical/causal world model for 22-DoF humanoid control" 
+                         class="diagram-img">
+                    <figcaption>
+                        H2E Integration Engine fuses expert intent (symbolic directives) with physical feasibility checks (JEPA predictions), resolves conflicts (fold vs. bend), optimizes hierarchical policies, and delivers deterministic trajectories to actuators.<br>
+                        Full accountability logging ensures traceability and regulatory alignment – from intent to action in critical missions.
+                    </figcaption>
+                </div>
+
+                <div class="text-center max-w-4xl mx-auto text-lg text-slate-300 leading-relaxed mt-12">
+                    <p class="mb-6">
+                        Current AI is split: <strong>Transformers</strong> excel at language but lack physical grounding → unsafe hallucinations.<br>
+                        <strong>JEPA-style world models</strong> understand causality and dynamics but miss high-level expert guidance and auditability.<br><br>
+                        <strong>H2E closes the gap forever</strong>: symbolic structure meets physical truth, resolved holonomically, executed deterministically.<br>
+                        Result: from probabilistic guessing → provable engineering certainty for aerospace, defense, and 22-DoF humanoids.
+                    </p>
+                    <a href="#h2e" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-5 rounded-xl font-bold text-lg transition shadow-xl shadow-emerald-900/40 mt-4">
+                        Explore the H2E Pipeline →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="h2e" class="py-24 bg-slate-800/50">
         <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-5xl font-bold mb-6 italic">The H2E-Resilient AI Pipeline</h2>
@@ -321,7 +397,7 @@
                     </div>
                 </div>
 
-                 <!-- Medium 2 Article -->    
+                <!-- Medium 2 Article -->    
                 <div class="bg-slate-800/60 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition group">
                     <div class="flex items-start gap-5">
                         <div class="text-blue-400 text-3xl mt-1"><i class="fas fa-newspaper"></i></div>
@@ -331,7 +407,6 @@
                             </h4>
                             <p class="text-slate-400 mb-3">Morales Aguilera, F. (2026, Feb 8). Medium.</p>
                             <a href="https://medium.com/ai-simplified-in-plain-english/claude-4-6-h2e-building-a-governed-multi-agent-system-with-86-alignment-at-14-80-42eb324c23e1"  
-                               
                                target="_blank" 
                                class="text-blue-400 hover:underline flex items-center gap-2">
                                 <i class="fas fa-external-link-alt"></i> Read Article
@@ -437,7 +512,7 @@
             </div>
             <p class="text-slate-400 font-medium text-lg mb-4">Sovereign Machine Lab Association • Quebec, Canada</p>
             <p class="text-slate-500 mb-3">Contact: <a href="mailto:f5555morales@gmail.com" class="text-blue-400 hover:underline">f5555morales@gmail.com</a></p>
-            <p class="text-slate-600 text-sm">© 2026 • Last updated March 2026</p>
+            <p class="text-slate-600 text-sm mb-3">© 2026 • Last updated March 2026</p>
             <p class="text-slate-700 text-xs mt-6 uppercase tracking-widest font-bold">Determinism • Sovereignty • Accountability</p>
         </div>
     </footer>
