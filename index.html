@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sovereign Machine Lab Association | Engineering Certainty</title>
+    <!-- SEO basics -->
+    <meta name="description" content="Sovereign Machine Lab Association: Engineering deterministic, verifiable Sovereign AI for aerospace, defense, and mission-critical applications via the H2E framework.">
+    <!-- Open Graph for better sharing (LinkedIn, X, etc.) -->
+    <meta property="og:title" content="Sovereign Machine Lab Association | Engineering Certainty">
+    <meta property="og:description" content="Transforming probabilistic AI into deterministic engineering intelligence through the H2E framework – locally controlled, verifiable, and mission-critical.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/Sovereign%20Machine%20Lab.jpg">
+    <meta property="og:url" content="https://frank-morales2020.github.io/sovereign-machine-lab/">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -14,22 +23,49 @@
             -webkit-text-fill-color: transparent;
         }
         .pipeline-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        #mobile-menu {
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
-
     <nav class="p-6 border-b border-slate-800 bg-slate-900/95 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/Sovereign%20Machine%20Lab.jpg" alt="SMLA Logo" class="h-12 w-auto rounded shadow-lg">
+                <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/Sovereign%20Machine%20Lab.jpg" 
+                     alt="Sovereign Machine Lab Association Logo" 
+                     class="h-12 w-auto rounded shadow-lg" 
+                     loading="lazy">
                 <h1 class="text-2xl font-bold tracking-tighter text-blue-400 hidden lg:block uppercase">Sovereign Machine Lab</h1>
             </div>
-            <div class="space-x-8 hidden md:flex font-medium text-sm uppercase tracking-widest">
+
+            <!-- Desktop Nav -->
+            <div class="space-x-8 hidden md:flex font-medium text-sm uppercase tracking-widest items-center">
                 <a href="#mission" class="hover:text-blue-400 transition">Mission</a>
                 <a href="#summary" class="hover:text-blue-400 transition">Executive Summary</a>
                 <a href="#h2e" class="hover:text-blue-400 transition">H2E Pipeline</a>
-                <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="text-blue-400 border border-blue-400 px-4 py-1 rounded-full hover:bg-blue-400 hover:text-slate-900 transition font-bold">GitHub Project</a>
+                <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" 
+                   class="text-blue-400 border border-blue-400 px-4 py-1 rounded-full hover:bg-blue-400 hover:text-slate-900 transition font-bold">
+                   GitHub Project
+                </a>
             </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="md:hidden text-3xl text-blue-400 focus:outline-none" 
+                    aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest">
+            <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
+            <a href="#summary" class="block hover:text-blue-400 transition">Executive Summary</a>
+            <a href="#h2e" class="block hover:text-blue-400 transition">H2E Pipeline</a>
+            <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" 
+               class="block text-blue-400 border border-blue-400 px-6 py-2 rounded-full hover:bg-blue-400 hover:text-slate-900 transition font-bold mx-auto max-w-xs">
+               GitHub Project
+            </a>
         </div>
     </nav>
 
@@ -39,7 +75,7 @@
                 Engineering Certainty for Critical Missions.
             </h2>
             <p class="text-xl text-slate-400 mb-10 leading-relaxed">
-                Transforming probabilistic "Black Box" AI into deterministic engineering tools through the **H2E (Human-to-Expert)** framework.
+                Transforming probabilistic "Black Box" AI into deterministic engineering tools through the <strong>H2E (Human-to-Expert)</strong> framework.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#mission" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-900/20">Read the Mission</a>
@@ -53,9 +89,9 @@
             <h2 class="text-blue-400 text-sm font-bold uppercase tracking-[0.3em] mb-4">The Mission</h2>
             <h3 class="text-4xl font-bold mb-8 text-white">From Probability to Determinism</h3>
             <p class="text-xl text-slate-300 leading-relaxed italic">
-                "Our mission is to lead the global transition from probabilistic 'Black Box' AI to **Deterministic Engineering Intelligence**. Through the **H2E (Human-to-Expert)** framework, we ensure that every autonomous action is verifiable, expert-aligned, and mission-critical. We champion **Sovereign AI**: locally controlled, cloud-independent intelligence that remains unconditionally accountable to its human creators."
+                "Our mission is to lead the global transition from probabilistic 'Black Box' AI to <strong>Deterministic Engineering Intelligence</strong>. Through the <strong>H2E (Human-to-Expert)</strong> framework, we ensure that every autonomous action is verifiable, expert-aligned, and mission-critical. We champion <strong>Sovereign AI</strong>: locally controlled, cloud-independent intelligence that remains unconditionally accountable to its human creators."
             </p>
-            
+           
             <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-4">
                     <span class="block text-4xl font-extrabold text-blue-400 mb-2">H2E</span>
@@ -76,10 +112,11 @@
         </div>
     </section>
 
+    <!-- The rest of your sections remain unchanged (summary, h2e, footer) -->
     <section id="summary" class="py-24 bg-slate-900">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-4xl font-bold mb-16 text-center">Executive Summary</h2>
-            
+           
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-8">
                     <div class="p-8 bg-slate-800 rounded-2xl border border-red-900/30">
@@ -88,10 +125,9 @@
                     </div>
                     <div class="p-8 bg-slate-800 rounded-2xl border border-emerald-900/30">
                         <h3 class="text-xl font-bold mb-4 text-emerald-400 uppercase tracking-widest">2. The Solution</h3>
-                        <p class="text-slate-400 mb-4">A proprietary "Notebook-First" pipeline that locks down AI into **Sovereign Artifacts** using .pth weight persistence and **Greedy Decoding** for 100% reproducibility.</p>
+                        <p class="text-slate-400 mb-4">A proprietary "Notebook-First" pipeline that locks down AI into <strong>Sovereign Artifacts</strong> using .pth weight persistence and <strong>Greedy Decoding</strong> for 100% reproducibility.</p>
                     </div>
                 </div>
-
                 <div class="space-y-8">
                     <div class="p-8 bg-slate-800 rounded-2xl border border-blue-900/30">
                         <h3 class="text-xl font-bold mb-4 text-blue-400 uppercase tracking-widest">3. Target Market</h3>
@@ -99,7 +135,7 @@
                     </div>
                     <div class="p-8 bg-slate-800 rounded-2xl border border-purple-900/30">
                         <h3 class="text-xl font-bold mb-4 text-purple-400 uppercase tracking-widest">4. Revenue Streams</h3>
-                        <ul class="text-slate-400 space-y-3">
+                        <ul class="text-slate-400 space-y-3 list-disc pl-5">
                             <li><strong>SROI-as-a-Service:</strong> Comprehensive AI efficiency auditing.</li>
                             <li><strong>H2E Certification:</strong> "Sovereign Certified" stamps for safety-critical models.</li>
                             <li><strong>Custom Integration:</strong> Holonomic integration for 22-DoF humanoid robotics.</li>
@@ -114,9 +150,12 @@
         <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-4xl font-bold mb-4 italic">The 'H2E-Resilient' AI Pipeline</h2>
             <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Bridging the gap between critical mission queries and verified physical or digital output.</p>
-            
-            <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/H2E%20Pipeline%20Diagram.jpg" alt="H2E Pipeline Diagram" class="rounded-2xl shadow-2xl border border-slate-700 mx-auto max-w-full mb-12">
-            
+           
+            <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/H2E%20Pipeline%20Diagram.jpg" 
+                 alt="H2E-Resilient AI Pipeline Diagram: From mission query validation through deterministic execution on 22-DoF systems" 
+                 class="rounded-2xl shadow-2xl border border-slate-700 mx-auto max-w-full mb-12" 
+                 loading="lazy">
+           
             <div class="bg-slate-950 p-6 rounded-lg font-mono text-sm text-blue-300 max-w-2xl mx-auto text-left border border-slate-800 shadow-inner">
                 // Deterministic Sovereign Execution Strategy<br>
                 // Seed: 123 for Zero Drift<br>
@@ -131,13 +170,23 @@
     <footer class="py-12 border-t border-slate-800 bg-slate-900 text-center">
         <div class="container mx-auto px-6">
             <div class="mb-8 flex justify-center space-x-10 text-3xl text-slate-500">
-                <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/frank-morales1964/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="hover:text-blue-400 transition" aria-label="GitHub Repository">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/frank-morales1964/" target="_blank" class="hover:text-blue-400 transition" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
-            <p class="text-slate-500 font-medium tracking-wide">&copy; 2026 Sovereign Machine Lab Association.</p>
+            <p class="text-slate-500 font-medium tracking-wide">© 2026 Sovereign Machine Lab Association.</p>
             <p class="text-slate-600 text-[10px] mt-2 uppercase tracking-[0.4em] font-bold">Determinism • Sovereignty • Accountability</p>
         </div>
     </footer>
 
+    <!-- Simple mobile menu toggle script -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
