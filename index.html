@@ -21,7 +21,7 @@
             -webkit-text-fill-color: transparent;
         }
         #mobile-menu {
-            transition: all 0.3s x ease;
+            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -53,7 +53,7 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest text-slate-300">
             <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
             <a href="#unesco" class="block hover:text-blue-400 transition">UNESCO Project</a>
             <a href="#summary" class="block hover:text-blue-400 transition">Executive Summary</a>
@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section id="unesco" class="py-24 bg-slate-900">
+    <section id="unesco" class="py-24 bg-slate-900 border-b border-slate-800">
         <div class="container mx-auto px-6 max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-blue-400 text-sm font-bold uppercase tracking-[0.3em] mb-4">Latest Achievement</h2>
@@ -116,59 +116,116 @@
                     SMLA Joins the <span class="gradient-text">UNESCO Resilient AI Challenge</span> 🛡️🌍
                 </h3>
                 <p class="text-slate-400 max-w-3xl mx-auto text-lg leading-relaxed">
-                    SMLA has officially submitted our entry for the 2026 UNESCO Resilient AI Challenge. We are advocating for <strong>Technological Sovereignty and Green AI</strong>, proving that high-performance intelligence doesn't require a permanent cloud connection.
+                    SMLA has officially submitted the <strong>H2E-Resilient</strong> entry for the 2026 UNESCO Resilient AI Challenge, advocating for Technological Sovereignty and Green AI through deterministic, cloud-independent intelligence.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
                 <div class="space-y-6">
                     <div class="bg-slate-800 p-8 rounded-2xl border border-blue-500/20 shadow-xl">
                         <h4 class="text-2xl font-bold text-white mb-4">The H2E-Resilient Breakthrough</h4>
-                        <p class="text-slate-300 mb-4">
-                            Optimized the <strong>Voxtral-Mini-4B</strong> model on the <strong>NVIDIA L4 Tensor Core GPU</strong> to deliver expert-level transcription under a strict <strong>3.15 GB VRAM ceiling</strong>.
+                        <p class="text-slate-300 mb-6">
+                            Using the <strong>NVIDIA L4 Tensor Core GPU</strong>, we optimized <strong>Voxtral-Mini-4B</strong> to deliver expert-level transcription while operating under a strict <strong>3.15 GB VRAM ceiling</strong>.
                         </p>
-                        <p class="text-slate-400 text-sm italic">
-                            "Resilience is about frugality. We democratize access for humanitarian disaster zones, emergency aviation, and cultural preservation."
-                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-emerald-500/10 p-2 rounded-lg text-emerald-400"><i class="fas fa-leaf"></i></div>
+                                <div>
+                                    <p class="text-white font-bold text-sm">Green AI Sustainability</p>
+                                    <p class="text-slate-400 text-xs">0.001175 kg CO2 footprint per cycle.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-500/10 p-2 rounded-lg text-blue-400"><i class="fas fa-microchip"></i></div>
+                                <div>
+                                    <p class="text-white font-bold text-sm">Frugal Computation</p>
+                                    <p class="text-slate-400 text-xs">44.25 Watts verified power draw.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bg-slate-950 p-1 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-slate-800">
-                                <th class="p-4 text-blue-400 uppercase text-xs tracking-widest">Verified Audit Metric</th>
-                                <th class="p-4 text-blue-400 uppercase text-xs tracking-widest">Result</th>
+                            <tr class="bg-slate-800 text-blue-400 uppercase text-xs tracking-widest">
+                                <th class="p-4">Engineering Metric</th>
+                                <th class="p-4">Audit Result</th>
                             </tr>
                         </thead>
                         <tbody class="text-slate-300">
                             <tr class="border-b border-slate-800">
                                 <td class="p-4 font-mono">⚡ Real-Time Factor (RTF)</td>
-                                <td class="p-4 text-emerald-400 font-bold">0.944 (Beat Target < 1.0)</td>
+                                <td class="p-4 text-emerald-400 font-bold">~0.917 (Avg)</td>
                             </tr>
                             <tr class="border-b border-slate-800">
-                                <td class="p-4 font-mono">🔋 Power Efficiency</td>
-                                <td class="p-4 text-emerald-400 font-bold">44.25 Watts</td>
+                                <td class="p-4 font-mono">💾 VRAM Peak Memory</td>
+                                <td class="p-4 text-emerald-400 font-bold">3.07 GB (Constant)</td>
                             </tr>
                             <tr class="border-b border-slate-800">
                                 <td class="p-4 font-mono">🧠 Determinism</td>
                                 <td class="p-4 text-emerald-400 font-bold">100% (Seed 123)</td>
                             </tr>
                             <tr>
-                                <td class="p-4 font-mono">🌿 Sustainability</td>
-                                <td class="p-4 text-emerald-400 font-bold">0.001175 kg CO2 / cycle</td>
+                                <td class="p-4 font-mono">🔋 Power Efficiency</td>
+                                <td class="p-4 text-emerald-400 font-bold">44.25 Watts</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <p class="mt-8 text-center text-slate-500 text-xs uppercase tracking-widest">
-                Special thanks to the Sustainable AI Coalition and UNESCO.
-            </p>
+
+            <div class="mt-12">
+                <h4 class="text-xl font-bold text-white mb-6 uppercase tracking-widest text-center">
+                    Detailed Performance Audit (H2E_Final_Performance_Audit.csv)
+                </h4>
+                <div class="overflow-x-auto bg-slate-950 rounded-2xl border border-slate-800">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-800/50 text-slate-400">
+                                <th class="p-4 border-b border-slate-700">Audit Reference File</th>
+                                <th class="p-4 border-b border-slate-700 text-center">RTF</th>
+                                <th class="p-4 border-b border-slate-700 text-center">VRAM (GB)</th>
+                                <th class="p-4 border-b border-slate-700">Test Category / Result</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-300">
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
+                                <td class="p-4 font-mono text-xs">barackobama2004dncARXE.mp3</td>
+                                <td class="p-4 font-bold text-center">0.928</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
+                            </tr>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
+                                <td class="p-4 font-mono text-xs">brad_pitt_sag_2020.mp3</td>
+                                <td class="p-4 font-bold text-center">0.921</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS (Acoustic Stress)</td>
+                            </tr>
+                            <tr class="border-b border-slate-900 hover:bg-slate-900/40">
+                                <td class="p-4 font-mono text-xs">mandela_davos_1999.mp3</td>
+                                <td class="p-4 font-bold text-center">0.908</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS (Historical Justice)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-900/40">
+                                <td class="p-4 font-mono text-xs text-blue-400">mark_carney_davos_2026.mp3</td>
+                                <td class="p-4 font-bold text-center">0.916</td>
+                                <td class="p-4 text-center">3.07</td>
+                                <td class="p-4 text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>PASS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-6 text-center text-slate-500 text-sm italic">
+                    All audits conducted with Greedy Decoding and Seed 123 to ensure zero model drift.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="summary" class="py-24 bg-slate-800/30">
+    <section id="summary" class="py-24 bg-slate-800/20">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-4xl font-bold mb-16 text-center">Executive Summary</h2>
            
@@ -186,7 +243,7 @@
                 <div class="space-y-8">
                     <div class="p-8 bg-slate-800 rounded-2xl border border-blue-900/30">
                         <h3 class="text-xl font-bold mb-4 text-blue-400 uppercase tracking-widest">3. Target Market</h3>
-                        <p class="text-slate-400">Aerospace Manufacturers (verifying flight manuals), AI Governance Boards (SROI metrics), and Defense Contractors requiring on-premise, secure Sovereign AI.</p>
+                        <p class="text-slate-400">Aerospace Manufacturers, AI Governance Boards, and Defense Contractors requiring on-premise, secure Sovereign AI.</p>
                     </div>
                     <div class="p-8 bg-slate-800 rounded-2xl border border-purple-900/30">
                         <h3 class="text-xl font-bold mb-4 text-purple-400 uppercase tracking-widest">4. Revenue Streams</h3>
@@ -210,29 +267,21 @@
 
             <div class="max-w-4xl mx-auto text-left space-y-6 text-slate-300 mb-12">
                 <h3 class="text-2xl font-bold text-blue-400 mb-4">How the H2E-Resilient Pipeline Works</h3>
-                
                 <p>
-                    The H2E-Resilient AI Pipeline is a deterministic, notebook-first workflow designed to eliminate probabilistic uncertainty in mission-critical applications. It enforces <strong>unconditional human oversight</strong> and <strong>zero-drift execution</strong> by combining expert-defined validation shields with locked sovereign artifacts.
+                    The H2E-Resilient AI Pipeline is a deterministic workflow designed to eliminate probabilistic uncertainty. It enforces <strong>unconditional human oversight</strong> by combining expert validation shields with locked sovereign artifacts.
                 </p>
 
                 <ol class="list-decimal pl-8 space-y-5 text-slate-300">
                     <li>
-                        <strong>Mission Query Intake & Shield Validation</strong><br>
-                        A critical mission query enters the pipeline. The <code>h2e_shield</code> — a deterministic validation layer — checks the query against expert-aligned rules. If validation fails, execution is blocked (no probabilistic fallback).
+                        <strong>Mission Query Intake & Shield Validation:</strong> A deterministic validation layer checks the query against expert-aligned rules. If validation fails, execution is blocked.
                     </li>
                     <li>
-                        <strong>Sovereign Artifact Deployment</strong><br>
-                        Upon successful validation, the pipeline deploys a frozen <strong>Sovereign Artifact</strong> — a .pth model checkpoint. All inference uses <strong>greedy decoding</strong> and a locked random seed (<code>123</code>) to guarantee identical outputs.
+                        <strong>Sovereign Artifact Deployment:</strong> Deploys a frozen <strong>.pth model checkpoint</strong>. Inference uses <strong>greedy decoding</strong> and a locked random seed (<code>123</code>) to guarantee identical outputs across hardware.
                     </li>
                     <li>
-                        <strong>Verified Output Execution</strong><br>
-                        The deterministic output is routed to the target system (e.g., flight manual cross-check or 22-DoF humanoid robot actuators) with verifiable traces for full auditability.
+                        <strong>Verified Output Execution:</strong> Deterministic output is routed to target systems (flight manuals or 22-DoF humanoid robots) with verifiable traces for full auditability.
                     </li>
                 </ol>
-
-                <p class="italic text-slate-400 mt-6 text-center">
-                    Result: From query to action, the pipeline delivers engineering certainty — not probabilistic confidence.
-                </p>
             </div>
 
             <img src="https://raw.githubusercontent.com/frank-morales2020/sovereign-machine-lab/main/H2E%20Pipeline%20Diagram.jpg" 
@@ -254,15 +303,9 @@
     <footer class="py-12 border-t border-slate-800 bg-slate-900 text-center">
         <div class="container mx-auto px-6">
             <div class="mb-8 flex justify-center space-x-10 text-3xl text-slate-500">
-                <a href="https://github.com/frank-morales2020/MLxDL/blob/main/README.md" target="_blank" class="hover:text-blue-400 transition" aria-label="GitHub Repository">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/frank-morales1964/" target="_blank" class="hover:text-blue-400 transition" aria-label="LinkedIn Profile">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://medium.com/@frankmorales_91352/" target="_blank" class="hover:text-blue-400 transition" aria-label="Medium Profile">
-                   <i class="fab fa-medium"></i>
-                 </a>                
+                <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/frank-morales1964/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@frankmorales_91352/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-medium"></i></a>                
             </div>
             <p class="text-slate-500 font-medium tracking-wide">&copy; 2026 Sovereign Machine Lab Association.</p>
             <p class="text-slate-600 text-[10px] mt-2 uppercase tracking-[0.4em] font-bold">Determinism • Sovereignty • Accountability</p>
