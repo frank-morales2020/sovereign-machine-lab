@@ -13,6 +13,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .pipeline-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
@@ -61,32 +62,34 @@
 
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div class="space-y-6">
-                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition shadow-lg pipeline-card">
                         <h3 class="text-xl font-bold mb-2 text-blue-400">Sovereign Core</h3>
-                        <p class="text-slate-400 text-sm">Localized processing using **.pth artifacts** and deterministic logic for true digital sovereignty.</p>
+                        <p class="text-slate-400 text-sm">Localized processing using **Sovereign Artifacts (.pth)** and deterministic logic to ensure AI remains cloud-independent and secure.</p>
                     </div>
-                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-emerald-500 transition">
+                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-emerald-500 transition shadow-lg pipeline-card">
                         <h3 class="text-xl font-bold mb-2 text-emerald-400">Accountability Layer</h3>
-                        <p class="text-slate-400 text-sm">Ensures every command is expert-verified for safety before physical 22-DoF execution.</p>
+                        <p class="text-slate-400 text-sm">A "shield" verification gate that validates AI intent against expert safety protocols before any physical movement.</p>
                     </div>
-                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-purple-500 transition">
+                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-purple-500 transition shadow-lg pipeline-card">
                         <h3 class="text-xl font-bold mb-2 text-purple-400">SROI Engine</h3>
-                        <p class="text-slate-400 text-sm">Semantic ROI Engine optimizes robot efficiency and mission relevance.</p>
+                        <p class="text-slate-400 text-sm">The **Semantic ROI** engine optimizes robotic performance, ensuring every action is both efficient and contextually meaningful.</p>
                     </div>
                 </div>
                 
                 <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl sticky top-32">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Technical Specs</h3>
-                    <ul class="text-slate-400 space-y-3 mb-6">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> 22-DoF Humanoid Integration</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> Seed Value: 123 (Reproducibility)</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-400 text-xs"></i> Hardware Target: Unitree G1</li>
+                    <h3 class="text-2xl font-bold mb-4 text-white uppercase tracking-tighter text-sm">Technical Specs</h3>
+                    <ul class="text-slate-400 space-y-3 mb-6 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-microchip text-blue-400"></i> 22-DoF Humanoid Control</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-code-branch text-blue-400"></i> Deterministic Seed: 123</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-robot text-blue-400"></i> Hardware: Unitree G1 Integration</li>
                     </ul>
-                    <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-blue-300">
-                        deploy_core(artifact=".pth", seed=123);<br>
+                    <div class="bg-slate-950 p-4 rounded-lg font-mono text-[10px] text-blue-300">
+                        // Execution Seed: 123<br>
+                        deploy_sovereign_core(model=".pth");<br>
                         verify_pipeline(h2e_shield);<br>
-                        execute_motion(dof=22);
+                        execute_motion(22_dof_output);
                     </div>
+                    <p class="mt-6 text-[10px] text-slate-500 uppercase tracking-widest font-bold text-center">Verified Output: Humanoid Body</p>
                 </div>
             </div>
         </div>
@@ -98,7 +101,8 @@
                 <a href="https://github.com/frank-morales2020/MLxDL" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/frank-morales1964/" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p class="text-slate-500 font-medium">&copy; 2026 Sovereign Machine Lab Association.</p>
+            <p class="text-slate-500 font-medium tracking-wide">&copy; 2026 Sovereign Machine Lab Association.</p>
+            <p class="text-slate-600 text-[10px] mt-2 uppercase tracking-[0.4em]">Intelligence • Sovereignty • Accountability</p>
         </div>
     </footer>
 
