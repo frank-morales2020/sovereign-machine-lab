@@ -67,6 +67,11 @@
             background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
             backdrop-filter: blur(4px);
         }
+        .secret-sauce {
+            border: 2px solid transparent;
+            background: linear-gradient(145deg, #0f172a, #1e293b) padding-box,
+                        linear-gradient(135deg, #60a5fa, #34d399) border-box;
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
@@ -80,6 +85,7 @@
             <div class="space-x-8 hidden md:flex font-medium text-sm uppercase tracking-widest items-center">
                 <a href="#mission" class="hover:text-blue-400 transition">Mission</a>
                 <a href="#unesco" class="hover:text-blue-400 transition">UNESCO Challenge</a>
+                <a href="#secret-sauce" class="hover:text-emerald-400 transition font-bold text-emerald-300">⚡Secret Sauce</a>
                 <a href="#multi-modal" class="hover:text-blue-400 transition">Multi-Modal</a>
                 <a href="#why-h2e" class="hover:text-blue-400 transition">Why H2E</a>
                 <a href="#h2e" class="hover:text-blue-400 transition">H2E Pipeline</a>
@@ -93,6 +99,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest">
             <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
             <a href="#unesco" class="block hover:text-blue-400 transition">UNESCO Challenge</a>
+            <a href="#secret-sauce" class="block hover:text-emerald-400 transition font-bold">⚡Secret Sauce</a>
             <a href="#multi-modal" class="block hover:text-blue-400 transition">Multi-Modal</a>
             <a href="#why-h2e" class="block hover:text-blue-400 transition">Why H2E</a>
             <a href="#h2e" class="block hover:text-blue-400 transition">H2E Pipeline</a>
@@ -142,6 +149,69 @@
                     <span class="block text-6xl font-extrabold text-purple-400 mb-4">SROI</span>
                     <span class="block text-white font-bold uppercase tracking-widest mb-3">Semantic ROI Engine</span>
                     <p class="text-slate-400">Quantify real efficiency, power savings & CO₂ reduction in mission systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: The Secret Sauce - Double Quantization (Brief & Impactful) -->
+    <section id="secret-sauce" class="py-20 bg-gradient-to-br from-slate-900 via-blue-900/10 to-slate-900 border-y border-blue-500/30">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-10">
+                <span class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-2 rounded-full mb-4 border border-emerald-500/30">⚡ THE SECRET SAUCE</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    <span class="gradient-text">Double Quantization</span>
+                </h2>
+                <p class="text-xl text-slate-400 italic">~0.4 bits/parameter saved • Zero memory spikes • Deterministic edge execution</p>
+            </div>
+
+            <div class="secret-sauce rounded-3xl p-8 md:p-10 relative overflow-hidden">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">The Technical Breakthrough</h3>
+                            <p class="text-slate-300 text-lg leading-relaxed">
+                                A specialized <span class="text-emerald-400 font-bold">two-stage compression process</span> that eliminates unpredictable memory spikes and OOM failures—transforming probabilistic AI into a stable, deterministic engineering tool.
+                            </p>
+                        </div>
+                        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-700">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span class="text-slate-400 line-through">Memory Spikes → Crashes</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                                <span class="text-emerald-400 font-bold">Stable Deterministic Memory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-slate-800/60 p-4 rounded-xl">
+                            <div class="text-2xl font-bold text-blue-400">~0.4</div>
+                            <div class="text-xs text-slate-400">bits/parameter saved</div>
+                        </div>
+                        <div class="bg-slate-800/60 p-4 rounded-xl">
+                            <div class="text-2xl font-bold text-emerald-400">100%</div>
+                            <div class="text-xs text-slate-400">spike elimination</div>
+                        </div>
+                        <div class="bg-slate-800/60 p-4 rounded-xl">
+                            <div class="text-2xl font-bold text-purple-400">3x</div>
+                            <div class="text-xs text-slate-400">modalities proven</div>
+                        </div>
+                        <div class="bg-slate-800/60 p-4 rounded-xl">
+                            <div class="text-2xl font-bold text-amber-400">edge</div>
+                            <div class="text-xs text-slate-400">consumer-grade</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center text-sm text-slate-500 border-t border-slate-700/50 pt-6">
+                        <p><i class="fas fa-microchip mr-2 text-emerald-400"></i> The foundation that makes all benchmark results possible — from audio to vision to text.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -368,6 +438,9 @@
                     <span class="text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>REAL-TIME EXPERT</span>
                     <span class="text-emerald-400 font-bold"><i class="fas fa-leaf mr-2"></i>GREEN</span>
                 </div>
+                <div class="mt-4 text-xs text-slate-500 italic border-t border-slate-700 pt-3">
+                    <i class="fas fa-microchip mr-1 text-emerald-400"></i> Double quantization + SDPA enables native 224x224 processing
+                </div>
             </div>
 
             <!-- Text Card -->
@@ -400,6 +473,9 @@
                 <div class="flex justify-between items-center">
                     <span class="text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>REAL-TIME EXPERT</span>
                     <span class="text-emerald-400 font-bold"><i class="fas fa-leaf mr-2"></i>GREEN</span>
+                </div>
+                <div class="mt-4 text-xs text-slate-500 italic border-t border-slate-700 pt-3">
+                    <i class="fas fa-microchip mr-1 text-emerald-400"></i> Reactive 5-token generation + greedy decoding = 100% deterministic
                 </div>
             </div>
         </div>
@@ -452,7 +528,7 @@
         </div>
 
         <div class="mt-8 text-center text-slate-400">
-            <p><i class="fas fa-flask mr-2 text-blue-400"></i> All models: Seed 123 locked • Greedy decoding • 4-bit quantization • Deterministic execution</p>
+            <p><i class="fas fa-flask mr-2 text-blue-400"></i> All models: Seed 123 locked • Greedy decoding • 4-bit double quantization • Deterministic execution</p>
         </div>
     </div>
 </section>
@@ -598,7 +674,7 @@
                 <div class="p-7 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/10 hover:shadow-xl">
                     <h4 class="text-lg font-bold mb-3 text-emerald-400">Fixed Resource Reliability</h4>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Critical agents frequently fail when resource spikes trigger "Out of Memory" (OOM) errors. This solution maintains a <strong>fixed 2.78 GB VRAM</strong> footprint for audio, with vision (3.14 GB) and text (1.67 GB) also well under limits, ensuring operational stability on edge hardware.
+                        Critical agents frequently fail when resource spikes trigger "Out of Memory" (OOM) errors. <span class="text-emerald-400">Double quantization eliminates memory spikes</span>, maintaining a <strong>fixed 2.78 GB VRAM</strong> footprint for audio, with vision (3.14 GB) and text (1.67 GB) also well under limits.
                     </p>
                 </div>
                 <div class="p-7 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/10 hover:shadow-xl md:col-span-2 lg:col-span-1">
@@ -831,7 +907,7 @@
             <p class="text-slate-400 font-medium text-lg mb-4">Sovereign Machine Lab  • Quebec, Canada</p>
             <p class="text-slate-500 mb-3">Contact: <a href="mailto:frank.morales@sovereign-machine-lab.ai" class="text-blue-400 hover:underline">frank.morales@sovereign-machine-lab.ai</a></p>
             <p class="text-slate-600 text-sm mb-3">© 2026 • Last updated March 2026</p>
-            <p class="text-slate-700 text-xs mt-6 uppercase tracking-widest font-bold">Vision • Text • Audio • Determinism • Sovereignty • Accountability</p>
+            <p class="text-slate-700 text-xs mt-6 uppercase tracking-widest font-bold">Double Quantization • Determinism • Sovereignty • Accountability</p>
         </div>
     </footer>
 
