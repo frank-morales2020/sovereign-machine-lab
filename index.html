@@ -63,6 +63,10 @@
             display: inline-block;
             box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
         }
+        .modal-card {
+            background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
+            backdrop-filter: blur(4px);
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
@@ -76,7 +80,7 @@
             <div class="space-x-8 hidden md:flex font-medium text-sm uppercase tracking-widest items-center">
                 <a href="#mission" class="hover:text-blue-400 transition">Mission</a>
                 <a href="#unesco" class="hover:text-blue-400 transition">UNESCO Challenge</a>
-                <a href="#summary" class="hover:text-blue-400 transition">Summary</a>
+                <a href="#multi-modal" class="hover:text-blue-400 transition">Multi-Modal</a>
                 <a href="#why-h2e" class="hover:text-blue-400 transition">Why H2E</a>
                 <a href="#h2e" class="hover:text-blue-400 transition">H2E Pipeline</a>
                 <a href="#references" class="hover:text-blue-400 transition">References</a>
@@ -89,7 +93,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 font-medium text-center uppercase tracking-widest">
             <a href="#mission" class="block hover:text-blue-400 transition">Mission</a>
             <a href="#unesco" class="block hover:text-blue-400 transition">UNESCO Challenge</a>
-            <a href="#summary" class="block hover:text-blue-400 transition">Summary</a>
+            <a href="#multi-modal" class="block hover:text-blue-400 transition">Multi-Modal</a>
             <a href="#why-h2e" class="block hover:text-blue-400 transition">Why H2E</a>
             <a href="#h2e" class="block hover:text-blue-400 transition">H2E Pipeline</a>
             <a href="#references" class="block hover:text-blue-400 transition">References</a>
@@ -197,15 +201,11 @@
             </div>
         </div>
 
-        <!-- ──────────────────────────────────────────────── -->
-        <!--   Everything below this line is YOUR ORIGINAL CODE  -->
-        <!--   unchanged – metrics cards + full audit table     -->
-        <!-- ──────────────────────────────────────────────── -->
-
+        <!-- Audio Breakthrough Card -->
         <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
             <div class="space-y-8">
                 <div class="bg-slate-800 p-10 rounded-2xl border border-blue-500/30 shadow-2xl">
-                    <h4 class="text-2xl font-bold text-white mb-6 text-center">On-Device Breakthrough</h4>
+                    <h4 class="text-2xl font-bold text-white mb-6 text-center">On-Device Audio Breakthrough</h4>
                     <p class="text-slate-300 mb-8 text-center text-lg">
                         Voxtral-Mini-4B optimized on NVIDIA L4 Tensor Core GPU – expert transcription under tight resource constraints.
                     </p>
@@ -226,7 +226,7 @@
                 <table class="text-left">
                     <thead>
                         <tr class="bg-slate-800 text-blue-300 uppercase text-sm tracking-wider">
-                            <th class="p-5">Metric</th>
+                            <th class="p-5">Audio Metric</th>
                             <th class="p-5">Verified Result</th>
                         </tr>
                     </thead>
@@ -252,9 +252,10 @@
             </div>
         </div>
 
+        <!-- Audio Performance Audit Table -->
         <div class="mt-16">
             <h4 class="text-2xl font-bold text-white mb-8 uppercase tracking-widest text-center">
-                H2E Performance Audit – Final Optimized Results (NVIDIA L4, Seed 123)
+                H2E Audio Performance Audit – Final Optimized Results (NVIDIA L4, Seed 123)
             </h4>
             <div class="overflow-x-auto bg-slate-950 rounded-2xl border border-slate-800 shadow-inner">
                 <table class="text-sm text-left">
@@ -321,8 +322,142 @@
     </div>
 </section>
 
-        
-    <section id="summary" class="py-24 bg-slate-800/30">
+<!-- NEW SECTION: Multi-Modal Results (Vision & Text) -->
+<section id="multi-modal" class="py-24 bg-slate-800/50 border-y border-slate-700">
+    <div class="container mx-auto px-6 max-w-6xl">
+        <div class="text-center mb-16">
+            <h2 class="text-blue-400 text-sm font-bold uppercase tracking-[0.35em] mb-6">Multi-Modal Excellence</h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-8">
+                Vision & Text <span class="gradient-text">Benchmark Results</span> 👁️📝
+            </h3>
+            <p class="text-slate-300 max-w-4xl mx-auto text-lg leading-relaxed">
+                Extending the H2E deterministic framework across vision-language and text-only models – all achieving real-time performance with minimal carbon footprint.
+            </p>
+        </div>
+
+        <!-- Vision & Text Cards -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Vision Card -->
+            <div class="modal-card p-8 rounded-2xl border border-blue-500/30 shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-4xl">👁️</span>
+                    <h4 class="text-2xl font-bold text-white">Vision-Language Model</h4>
+                </div>
+                <p class="text-slate-300 mb-6 text-lg">google/gemma-3-4b-it • Image Classification</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-blue-400 font-bold text-3xl">3.144</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">VRAM (GB)</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-emerald-400 font-bold text-3xl">0.765</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">RTF</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-purple-400 font-bold text-3xl">0.0237</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">Energy (Wh)</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-amber-400 font-bold text-3xl">0.00001116</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">Carbon (kg)</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>REAL-TIME EXPERT</span>
+                    <span class="text-emerald-400 font-bold"><i class="fas fa-leaf mr-2"></i>GREEN</span>
+                </div>
+            </div>
+
+            <!-- Text Card -->
+            <div class="modal-card p-8 rounded-2xl border border-emerald-500/30 shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-4xl">📝</span>
+                    <h4 class="text-2xl font-bold text-white">Text-Only Model</h4>
+                </div>
+                <p class="text-slate-300 mb-6 text-lg">sarvamai/sarvam-1 • Translation Task</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-blue-400 font-bold text-3xl">1.669</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">VRAM (GB)</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-emerald-400 font-bold text-3xl">0.854</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">RTF</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-purple-400 font-bold text-3xl">0.0243</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">Energy (Wh)</p>
+                    </div>
+                    <div class="bg-slate-900/70 p-6 rounded-xl border border-slate-700">
+                        <p class="text-amber-400 font-bold text-3xl">0.00001142</p>
+                        <p class="text-slate-400 uppercase text-xs mt-2">Carbon (kg)</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <span class="text-emerald-400 font-bold"><i class="fas fa-check-circle mr-2"></i>REAL-TIME EXPERT</span>
+                    <span class="text-emerald-400 font-bold"><i class="fas fa-leaf mr-2"></i>GREEN</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multi-Modal Summary Table -->
+        <div class="bg-slate-950 p-2 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
+            <h4 class="text-xl font-bold text-white p-6 text-center">Comprehensive Multi-Modal Results</h4>
+            <table class="text-left">
+                <thead>
+                    <tr class="bg-slate-800 text-blue-300 uppercase text-sm tracking-wider">
+                        <th class="p-5">Modality</th>
+                        <th class="p-5">Model</th>
+                        <th class="p-5 text-center">VRAM (GB)</th>
+                        <th class="p-5 text-center">RTF</th>
+                        <th class="p-5 text-center">Energy (Wh)</th>
+                        <th class="p-5 text-center">Carbon (kg)</th>
+                        <th class="p-5 text-center">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-slate-200">
+                    <tr class="border-b border-slate-800">
+                        <td class="p-5 font-bold">Vision</td>
+                        <td class="p-5 font-mono">gemma-3-4b-it</td>
+                        <td class="p-5 text-center text-emerald-400">3.144</td>
+                        <td class="p-5 text-center text-emerald-400">0.765</td>
+                        <td class="p-5 text-center text-emerald-400">0.0237</td>
+                        <td class="p-5 text-center text-emerald-400">0.00001116</td>
+                        <td class="p-5 text-center text-emerald-400">✅ PASS</td>
+                    </tr>
+                    <tr class="border-b border-slate-800">
+                        <td class="p-5 font-bold">Text</td>
+                        <td class="p-5 font-mono">sarvam-1</td>
+                        <td class="p-5 text-center text-emerald-400">1.669</td>
+                        <td class="p-5 text-center text-emerald-400">0.854</td>
+                        <td class="p-5 text-center text-emerald-400">0.0243</td>
+                        <td class="p-5 text-center text-emerald-400">0.00001142</td>
+                        <td class="p-5 text-center text-emerald-400">✅ PASS</td>
+                    </tr>
+                    <tr>
+                        <td class="p-5 font-bold">Audio</td>
+                        <td class="p-5 font-mono">Voxtral-Mini-4B</td>
+                        <td class="p-5 text-center text-emerald-400">2.78</td>
+                        <td class="p-5 text-center text-emerald-400">0.816</td>
+                        <td class="p-5 text-center text-emerald-400">0.6336</td>
+                        <td class="p-5 text-center text-emerald-400">0.000298</td>
+                        <td class="p-5 text-center text-emerald-400">✅ PASS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-8 text-center text-slate-400">
+            <p><i class="fas fa-flask mr-2 text-blue-400"></i> All models: Seed 123 locked • Greedy decoding • 4-bit quantization • Deterministic execution</p>
+        </div>
+    </div>
+</section>
+
+    <section id="summary" class="py-24 bg-slate-900/30">
         <div class="container mx-auto px-6 max-w-6xl text-center">
             <h2 class="text-5xl font-bold mb-16">Executive Summary</h2>
             <div class="grid md:grid-cols-2 gap-10 text-left">
@@ -463,13 +598,13 @@
                 <div class="p-7 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/10 hover:shadow-xl">
                     <h4 class="text-lg font-bold mb-3 text-emerald-400">Fixed Resource Reliability</h4>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Critical agents frequently fail when resource spikes trigger "Out of Memory" (OOM) errors. This solution maintains a <strong>fixed 2.78 GB VRAM</strong> footprint, ensuring operational stability on edge hardware even during high-concurrency tasks.
+                        Critical agents frequently fail when resource spikes trigger "Out of Memory" (OOM) errors. This solution maintains a <strong>fixed 2.78 GB VRAM</strong> footprint for audio, with vision (3.14 GB) and text (1.67 GB) also well under limits, ensuring operational stability on edge hardware.
                     </p>
                 </div>
                 <div class="p-7 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/10 hover:shadow-xl md:col-span-2 lg:col-span-1">
                     <h4 class="text-lg font-bold mb-3 text-emerald-400">Real-Time Responsiveness</h4>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Agentic workflows demand near-zero latency for effective interaction. With an average <strong>Real-Time Factor (RTF) of 0.816</strong>, the framework ensures agents process information and act faster than real-time speech—essential for time-sensitive missions.
+                        Agentic workflows demand near-zero latency. With average RTF of <strong>0.816 (audio)</strong>, <strong>0.765 (vision)</strong>, and <strong>0.854 (text)</strong>, the framework ensures agents process information faster than real-time across all modalities.
                     </p>
                 </div>
                 <div class="p-7 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all duration-300 hover:shadow-emerald-500/10 hover:shadow-xl md:col-span-2 lg:col-span-2">
@@ -506,11 +641,11 @@
 
                 <div class="flex flex-row md:flex-col gap-4 md:gap-6 w-full md:w-auto justify-center">
                     <div class="p-5 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-center min-w-[140px]">
-                        <div class="text-[11px] md:text-xs text-emerald-400 uppercase font-bold mb-1">Memory Performance</div>
+                        <div class="text-[11px] md:text-xs text-emerald-400 uppercase font-bold mb-1">Audio Memory</div>
                         <div class="text-2xl md:text-3xl font-bold text-white leading-tight">2.78 GB <span class="text-xs md:text-sm text-slate-400">FIXED</span></div>
                     </div>
                     <div class="p-5 bg-blue-500/10 border border-blue-500/20 rounded-xl text-center min-w-[140px]">
-                        <div class="text-[11px] md:text-xs text-blue-400 uppercase font-bold mb-1">Execution Speed</div>
+                        <div class="text-[11px] md:text-xs text-blue-400 uppercase font-bold mb-1">Audio Speed</div>
                         <div class="text-2xl md:text-3xl font-bold text-white leading-tight">0.816 <span class="text-xs md:text-sm text-slate-400">RTF</span></div>
                     </div>
                 </div>
@@ -541,7 +676,7 @@
                         <tr>
                             <td class="p-6 font-medium">Edge Readiness</td>
                             <td class="p-6 text-center text-slate-500 italic">Memory Spikes</td>
-                            <td class="p-6 text-center font-bold text-white">2.78 GB Static</td>
+                            <td class="p-6 text-center font-bold text-white">2.78-3.14 GB Static</td>
                         </tr>
                     </tbody>
                 </table>
@@ -696,7 +831,7 @@
             <p class="text-slate-400 font-medium text-lg mb-4">Sovereign Machine Lab  • Quebec, Canada</p>
             <p class="text-slate-500 mb-3">Contact: <a href="mailto:frank.morales@sovereign-machine-lab.ai" class="text-blue-400 hover:underline">frank.morales@sovereign-machine-lab.ai</a></p>
             <p class="text-slate-600 text-sm mb-3">© 2026 • Last updated March 2026</p>
-            <p class="text-slate-700 text-xs mt-6 uppercase tracking-widest font-bold">Determinism • Sovereignty • Accountability</p>
+            <p class="text-slate-700 text-xs mt-6 uppercase tracking-widest font-bold">Vision • Text • Audio • Determinism • Sovereignty • Accountability</p>
         </div>
     </footer>
 
