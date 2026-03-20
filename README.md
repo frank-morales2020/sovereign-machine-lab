@@ -1,4 +1,4 @@
-# Sovereign Machine Lab Association (SMLA)
+# Sovereign Machine Lab Association (S0MALA)
 ### *Engineering Accountability through H2E and High-DoF Robotics*
 
 The **Sovereign Machine Lab Association** is a research-driven initiative focused on the convergence of **Human-to-Expert (H2E)** frameworks and advanced **22-DoF (Degrees of Freedom)** humanoid robotics.
