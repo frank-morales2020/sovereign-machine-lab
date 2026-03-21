@@ -1,0 +1,278 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.root{display:flex;min-height:700px;background:#080d1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;border-radius:12px;overflow:hidden}
+.sidebar{width:230px;min-width:230px;background:#0d1224;border-right:1px solid #1e2a40;padding:16px 10px;display:flex;flex-direction:column;gap:3px}
+.ni{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;cursor:pointer;color:#7a8ba3;transition:all .15s}
+.ni:hover{background:#1a2340;color:#e2e8f0}
+.ni.active{background:#1a3060;color:#60a5fa}
+.ni-icon{width:30px;height:30px;min-width:30px;border-radius:7px;background:#1a2340;display:flex;align-items:center;justify-content:center;font-size:14px}
+.ni.active .ni-icon{background:#1e3a6e}
+.nl{font-size:12px;font-weight:500}
+.ns{font-size:10px;color:#4a5a72;margin-top:1px}
+.ni.active .ns{color:#4a7ab3}
+.sf{margin-top:auto;background:#111d36;border-radius:9px;padding:13px;border:1px solid #1e3060}
+.sf-t{font-size:12px;font-weight:600;color:#60a5fa;margin-bottom:3px}
+.sf-s{font-size:10px;color:#4a6a8a;line-height:1.4}
+.main{flex:1;overflow-y:auto;padding:22px;background:#080d1a}
+.ph{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.ph-icon{width:38px;height:38px;border-radius:9px;background:#1a3060;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ph-t{font-size:17px;font-weight:600;color:#e2e8f0}
+.ph-s{font-size:11px;color:#4a5a72;margin-top:1px}
+.card{background:#0d1224;border:1px solid #1e2a40;border-radius:11px;padding:18px;margin-bottom:14px}
+.ct{font-size:13px;font-weight:600;color:#e2e8f0;margin-bottom:3px;display:flex;align-items:center;gap:7px}
+.cs{font-size:11px;color:#4a5a72;margin-bottom:14px}
+.og{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.oc{border:1px solid #1e2a40;border-radius:9px;padding:12px 14px;cursor:pointer;transition:all .15s;background:#111827}
+.oc:hover{border-color:#2a3a5a;background:#161e30}
+.oc.sel{border-color:#3b82f6;background:#0f2044}
+.ot{font-size:12px;font-weight:500;color:#e2e8f0;margin-bottom:2px}
+.os{font-size:10px;color:#4a5a72}
+.lg{display:flex;gap:8px}
+.lb{flex:1;padding:9px;border-radius:7px;border:1px solid #1e2a40;background:#111827;color:#7a8ba3;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;text-align:center}
+.lb:hover{border-color:#2a3a5a;color:#e2e8f0}
+.lb.sel{border-color:#3b82f6;color:#60a5fa;background:#0f2044}
+.div{height:1px;background:#1e2a40;margin:13px 0}
+.fl{font-size:12px;font-weight:500;color:#e2e8f0;margin-bottom:3px}
+.fs{font-size:10px;color:#4a5a72;margin-bottom:7px}
+.ti{width:100%;background:#111827;border:1px solid #1e2a40;border-radius:7px;padding:9px 12px;color:#e2e8f0;font-size:12px;outline:none;transition:border .15s}
+.ti:focus{border-color:#3b82f6}
+.ti::placeholder{color:#2a3a5a}
+.row{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.badge{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:500}
+.badge-blue{background:#1a2d5a;color:#60a5fa}
+.badge-green{background:#0a2a1a;color:#34d399}
+.badge-amber{background:#2a1a00;color:#fbbf24}
+.slider-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.slider-row label{font-size:11px;color:#7a8ba3;width:110px;min-width:110px}
+.slider-row input[type=range]{flex:1}
+.slider-val{font-size:12px;font-weight:500;color:#60a5fa;width:36px;text-align:right}
+.sess-row{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:#111827;border-radius:8px;border:1px solid #1e2a40;margin-bottom:7px}
+.sess-id{font-size:12px;font-weight:500;color:#e2e8f0;font-family:monospace}
+.sess-meta{font-size:10px;color:#4a5a72;margin-top:2px}
+.sess-stat{font-size:10px;padding:2px 7px;border-radius:5px}
+.topic-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:10px;padding:3px 9px;border-radius:12px;background:#111827;border:1px solid #1e2a40;color:#7a8ba3;cursor:pointer;transition:all .15s}
+.chip:hover{border-color:#3b82f6;color:#60a5fa}
+.chip.on{border-color:#3b82f6;color:#60a5fa;background:#0f2044}
+.sroi-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.sroi-label{font-size:11px;color:#7a8ba3;width:80px;min-width:80px}
+.sroi-track{flex:1;height:5px;background:#1e2a40;border-radius:3px;overflow:hidden}
+.sroi-fill{height:100%;border-radius:3px;transition:width .3s}
+.sroi-val{font-size:11px;color:#4a5a72;width:28px;text-align:right}
+.info-notice{display:flex;align-items:center;gap:8px;background:#111827;border:1px solid #1e2a40;border-radius:7px;padding:11px 14px;margin-bottom:14px}
+.save-btn{background:#3b82f6;color:#fff;border:none;border-radius:22px;padding:11px 26px;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .15s}
+.save-btn:hover{background:#2563eb}
+.encoder-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.enc-stat{background:#111827;border:1px solid #1e2a40;border-radius:8px;padding:10px 12px}
+.enc-val{font-size:20px;font-weight:600;color:#60a5fa;margin-bottom:2px}
+.enc-lbl{font-size:10px;color:#4a5a72}
+</style>
+
+<div class="root">
+  <div class="sidebar">
+    <div class="ni"><div class="ni-icon">🔐</div><div><div class="nl">Session</div><div class="ns">Load & resume</div></div></div>
+    <div class="ni active"><div class="ni-icon">🧠</div><div><div class="nl">H2E Tutor</div><div class="ns">Encoder & SROI config</div></div><span style="margin-left:auto;color:#60a5fa;font-size:11px">›</span></div>
+    <div class="ni"><div class="ni-icon">🎓</div><div><div class="nl">Domain</div><div class="ns">Subject area</div></div></div>
+    <div class="ni"><div class="ni-icon">🪜</div><div><div class="nl">Scaffolding</div><div class="ns">Bridge question settings</div></div></div>
+    <div class="ni"><div class="ni-icon">📊</div><div><div class="nl">SROI Gate</div><div class="ns">Threshold & weights</div></div></div>
+    <div class="ni"><div class="ni-icon">📄</div><div><div class="nl">Reports</div><div class="ns">Export & history</div></div></div>
+    <div class="sf">
+      <div style="font-size:14px;margin-bottom:5px">✦</div>
+      <div class="sf-t">H2E-JEPA v4</div>
+      <div class="sf-s">Deterministic seed 123 · 4 blocks · 8 heads · 1024-dim</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="ph">
+      <div class="ph-icon">🧠</div>
+      <div><div class="ph-t">H2E Socratic Tutor</div><div class="ph-s">Configure encoder, SROI gate, domain, and scaffolding behavior</div></div>
+    </div>
+
+    <div class="card">
+      <div class="ct">🧬 Deep Encoder</div>
+      <div class="cs">V-JEPA residual transformer — current architecture</div>
+      <div class="encoder-grid">
+        <div class="enc-stat"><div class="enc-val">4</div><div class="enc-lbl">Residual blocks</div></div>
+        <div class="enc-stat"><div class="enc-val">8</div><div class="enc-lbl">Attention heads</div></div>
+        <div class="enc-stat"><div class="enc-val">1024</div><div class="enc-lbl">Latent dimension</div></div>
+        <div class="enc-stat"><div class="enc-val">0.1</div><div class="enc-lbl">Dropout rate</div></div>
+      </div>
+      <div class="div"></div>
+      <div class="slider-row">
+        <label>Encoder depth</label>
+        <input type="range" min="1" max="8" value="4" step="1" oninput="this.nextElementSibling.textContent=this.value">
+        <span class="slider-val">4</span>
+      </div>
+      <div class="slider-row">
+        <label>Attention heads</label>
+        <input type="range" min="1" max="16" value="8" step="1" oninput="this.nextElementSibling.textContent=this.value">
+        <span class="slider-val">8</span>
+      </div>
+      <div class="slider-row">
+        <label>Dropout</label>
+        <input type="range" min="0" max="50" value="10" step="1" oninput="this.nextElementSibling.textContent=(this.value/100).toFixed(2)">
+        <span class="slider-val">0.10</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ct">🎓 Domain</div>
+      <div class="cs">Subject area for topic extraction, jargon detection, and scaffolding</div>
+      <div class="og" id="domain-grid">
+        <div class="oc sel" onclick="sel(this,'domain-grid')"><div class="ot">🤖 General ML</div><div class="os">Encoders, latent spaces, gradients</div></div>
+        <div class="oc" onclick="sel(this,'domain-grid')"><div class="ot">🦾 Robotics</div><div class="os">Locomotion, sim-to-real, control</div></div>
+        <div class="oc" onclick="sel(this,'domain-grid')"><div class="ot">💬 NLP</div><div class="os">Transformers, RLHF, alignment</div></div>
+        <div class="oc" onclick="sel(this,'domain-grid')"><div class="ot">👁 Computer Vision</div><div class="os">Detection, segmentation, JEPA</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ct">📊 SROI Gate</div>
+      <div class="cs">Scoring weights and pass threshold — must sum to 1.0</div>
+
+      <div class="div" style="margin-top:0"></div>
+      <div class="fl">Pass threshold</div>
+      <div class="slider-row" style="margin-bottom:0">
+        <label>Threshold</label>
+        <input type="range" min="50" max="95" value="70" step="1" oninput="document.getElementById('thresh-val').textContent=(this.value/100).toFixed(2);updateBars()">
+        <span class="slider-val" id="thresh-val">0.70</span>
+      </div>
+      <div class="div"></div>
+
+      <div class="fl" style="margin-bottom:10px">Dimension weights</div>
+      <div class="slider-row">
+        <label>Depth (0.35)</label>
+        <input type="range" min="0" max="60" value="35" step="1" id="w-depth" oninput="updateWeightLabel(this,'lw-depth');updateBars()">
+        <span class="slider-val" id="lw-depth">0.35</span>
+      </div>
+      <div class="slider-row">
+        <label>Relevance (0.25)</label>
+        <input type="range" min="0" max="60" value="25" step="1" id="w-rel" oninput="updateWeightLabel(this,'lw-rel');updateBars()">
+        <span class="slider-val" id="lw-rel">0.25</span>
+      </div>
+      <div class="slider-row">
+        <label>Novelty (0.15)</label>
+        <input type="range" min="0" max="60" value="15" step="1" id="w-nov" oninput="updateWeightLabel(this,'lw-nov');updateBars()">
+        <span class="slider-val" id="lw-nov">0.15</span>
+      </div>
+      <div class="slider-row">
+        <label>Precision (0.15)</label>
+        <input type="range" min="0" max="60" value="15" step="1" id="w-prec" oninput="updateWeightLabel(this,'lw-prec');updateBars()">
+        <span class="slider-val" id="lw-prec">0.15</span>
+      </div>
+      <div class="slider-row">
+        <label>Progression (0.10)</label>
+        <input type="range" min="0" max="60" value="10" step="1" id="w-prog" oninput="updateWeightLabel(this,'lw-prog');updateBars()">
+        <span class="slider-val" id="lw-prog">0.10</span>
+      </div>
+
+      <div class="div"></div>
+      <div class="fl" style="margin-bottom:8px">Live SROI preview — last session scores</div>
+      <div id="sroi-preview">
+        <div class="sroi-bar-row"><span class="sroi-label">Depth</span><div class="sroi-track"><div class="sroi-fill" id="bar-depth" style="width:78%;background:#60a5fa"></div></div><span class="sroi-val" id="bv-depth">0.78</span></div>
+        <div class="sroi-bar-row"><span class="sroi-label">Relevance</span><div class="sroi-track"><div class="sroi-fill" id="bar-rel" style="width:92%;background:#34d399"></div></div><span class="sroi-val" id="bv-rel">0.92</span></div>
+        <div class="sroi-bar-row"><span class="sroi-label">Novelty</span><div class="sroi-track"><div class="sroi-fill" id="bar-nov" style="width:65%;background:#a78bfa"></div></div><span class="sroi-val" id="bv-nov">0.65</span></div>
+        <div class="sroi-bar-row"><span class="sroi-label">Precision</span><div class="sroi-track"><div class="sroi-fill" id="bar-prec" style="width:88%;background:#f472b6"></div></div><span class="sroi-val" id="bv-prec">0.88</span></div>
+        <div class="sroi-bar-row"><span class="sroi-label">Progression</span><div class="sroi-track"><div class="sroi-fill" id="bar-prog" style="width:65%;background:#fbbf24"></div></div><span class="sroi-val" id="bv-prog">0.65</span></div>
+        <div class="div" style="margin:10px 0 8px"></div>
+        <div class="sroi-bar-row">
+          <span class="sroi-label" style="color:#e2e8f0;font-weight:500">Aggregate</span>
+          <div class="sroi-track" style="height:7px"><div class="sroi-fill" id="bar-agg" style="width:81%;background:#3b82f6"></div></div>
+          <span class="sroi-val" id="bv-agg" style="color:#60a5fa;font-weight:500">0.81</span>
+        </div>
+        <div id="pass-badge" style="margin-top:6px;display:flex;align-items:center;gap:6px">
+          <span id="pass-icon" style="font-size:13px">✅</span>
+          <span id="pass-label" style="font-size:11px;color:#34d399">PASS — above threshold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ct">🪜 Scaffolding</div>
+      <div class="cs">Auto-follow and bridge question behavior</div>
+      <div class="og" id="scaffold-grid">
+        <div class="oc sel" onclick="sel(this,'scaffold-grid')"><div class="ot">🤖 Auto-follow</div><div class="os">System answers its own scaffold</div></div>
+        <div class="oc" onclick="sel(this,'scaffold-grid')"><div class="ot">🧑 Manual</div><div class="os">Student answers each bridge step</div></div>
+      </div>
+      <div class="div"></div>
+      <div class="fl">Bridge questions per scaffold</div>
+      <div class="lg" id="bridge-grid">
+        <div class="lb" onclick="selLen(this,'bridge-grid')">2</div>
+        <div class="lb sel" onclick="selLen(this,'bridge-grid')">3</div>
+        <div class="lb" onclick="selLen(this,'bridge-grid')">4</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ct">🔐 Sessions</div>
+      <div class="cs">Recent sessions — click to resume</div>
+      <div class="sess-row">
+        <div>
+          <div class="sess-id">e6b59cb9</div>
+          <div class="sess-meta">general_ml · 4 turns · today</div>
+          <div class="topic-chips">
+            <span class="chip on">latent_space</span><span class="chip on">activation_functions</span><span class="chip on">gradient_flow</span><span class="chip">autoencoders</span>
+          </div>
+        </div>
+        <span class="badge badge-green">3/4 passed</span>
+      </div>
+      <div class="sess-row">
+        <div>
+          <div class="sess-id">722f085f</div>
+          <div class="sess-meta">general_ml · 4 turns · yesterday</div>
+          <div class="topic-chips">
+            <span class="chip on">latent_space</span><span class="chip">curriculum_learning</span>
+          </div>
+        </div>
+        <span class="badge badge-amber">2/4 passed</span>
+      </div>
+      <div class="sess-row">
+        <div>
+          <div class="sess-id">f472b0d3</div>
+          <div class="sess-meta">general_ml · 4 turns · 2 days ago</div>
+          <div class="topic-chips">
+            <span class="chip">neural_networks</span>
+          </div>
+        </div>
+        <span class="badge badge-amber">1/4 passed</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ct">📄 Reports</div>
+      <div class="cs">Export learning reports for the current session</div>
+      <div class="lg">
+        <div class="lb sel" onclick="selLen(this,'fmt')">Markdown</div>
+        <div class="lb" onclick="selLen(this,'fmt')">PDF</div>
+        <div class="lb" onclick="selLen(this,'fmt')">JSON</div>
+      </div>
+    </div>
+
+    <div class="info-notice">
+      <span style="color:#60a5fa;font-size:13px">ℹ</span>
+      <div style="font-size:11px;color:#4a5a72">Settings apply to the next session run. Seed 123 locks deterministic encoder output across all sessions.</div>
+    </div>
+
+    <button class="save-btn">💾 Save H2E Configuration</button>
+  </div>
+</div>
+
+<script>
+const scores={depth:.78,rel:.92,nov:.65,prec:.88,prog:.65};
+function sel(el,grid){document.querySelectorAll('#'+grid+' .oc').forEach(c=>c.classList.remove('sel'));el.classList.add('sel')}
+function selLen(el,grid){document.querySelectorAll('#'+grid+' .lb').forEach(c=>c.classList.remove('sel'));el.classList.add('sel')}
+function updateWeightLabel(el,id){document.getElementById(id).textContent=(el.value/100).toFixed(2)}
+function updateBars(){
+  const w={depth:+document.getElementById('w-depth').value/100,rel:+document.getElementById('w-rel').value/100,nov:+document.getElementById('w-nov').value/100,prec:+document.getElementById('w-prec').value/100,prog:+document.getElementById('w-prog').value/100};
+  const agg=scores.depth*w.depth+scores.rel*w.rel+scores.nov*w.nov+scores.prec*w.prec+scores.prog*w.prog;
+  document.getElementById('bar-agg').style.width=(agg*100).toFixed(1)+'%';
+  document.getElementById('bv-agg').textContent=agg.toFixed(2);
+  const thr=+document.getElementById('thresh-val').textContent;
+  const pass=agg>=thr;
+  document.getElementById('pass-icon').textContent=pass?'✅':'❌';
+  document.getElementById('pass-label').textContent=pass?'PASS — above threshold':'GATE — below threshold';
+  document.getElementById('pass-label').style.color=pass?'#34d399':'#f87171';
+}
+</script>
